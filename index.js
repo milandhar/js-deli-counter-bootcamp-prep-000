@@ -2,7 +2,7 @@ var num = 1;
 
 function takeANumber(currentLine) {
     currentLine.push(num);
-    return `Welcome, ${personName}. You are number ${currentLine.length} in line.`
+    return `Welcome. You are number ${currentLine.length} in line.`
     num = num + 1;
   
 }
