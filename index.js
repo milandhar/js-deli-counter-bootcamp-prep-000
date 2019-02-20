@@ -1,6 +1,9 @@
-function takeANumber(currentLine, personName) {
-    currentLine.push(personName);
-    return `Welcome, ${personName}. You are number ${currentLine.length} in line.`; 
+var num = 1;
+
+function takeANumber(currentLine) {
+    currentLine.push(num);
+    return `Welcome, ${personName}. You are number ${currentLine.length} in line.`
+    num = num + 1;
   
 }
 
@@ -24,7 +27,10 @@ function currentLine(currentLine) {
   
   else {
     for(let i = 0; i<currentLine.length; i++ ) {
-       if (i === 0) {
+       
+       empty.push(`${i+1}. ${currentLine[i]}`)
+      
+    /*   if (i === 0) {
          empty.push(`${i+1}. ${currentLine[i]}`)
       }
       else {
@@ -32,9 +38,9 @@ function currentLine(currentLine) {
          empty.push(` ${i+1}. ${currentLine[i]}`)
       }
     }
-    
+    */
   }
-  return "The line is currently: " + empty
+  return "The line is currently: " + empty.join(" ")
 
 }
 
